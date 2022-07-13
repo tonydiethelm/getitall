@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#update apt
+sudo apt update
+
+#update the system
+sudo apt upgrade
+
+#get the programs I want
+sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp
