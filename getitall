@@ -8,3 +8,9 @@ sudo apt upgrade
 
 #get the programs I want
 sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp
+
+#extra stuff not in repositories
+wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+dpkg -install code_*.deb
+
+
