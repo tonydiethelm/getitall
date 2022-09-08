@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#enable multiverse repo
+sudo add-apt-repository multiverse
+
 #update apt
 sudo apt update
 
@@ -7,7 +10,11 @@ sudo apt update
 sudo apt upgrade
 
 #get the programs I want
-sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp npm rpi-imager
+sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp npm rpi-imager steam slack
+
+
+
+
 
 #extra stuff not in repositories
 
@@ -18,7 +25,10 @@ sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
 
-
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code # or code-insiders
+
+
+#slack
+sudo snap install slack
