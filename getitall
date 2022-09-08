@@ -10,7 +10,7 @@ sudo apt update
 sudo apt upgrade
 
 #get the programs I want
-sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp npm rpi-imager steam slack
+sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp npm rpi-imager steam slack aptitude
 
 
 
