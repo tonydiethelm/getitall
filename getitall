@@ -39,6 +39,8 @@ wget https://downloads.slack-edge.com/releases/linux/4.28.171/prod/x64/slack-des
 sudo dpkg -i ~/Downloads/slack-desktop*.deb
 
 #Zoom
+#dependencies first...
+sudo apt-get install libgl1-mesa-glx libegl1-mesa libxcb-xtest0
 wget https://cdn.zoom.us/prod/5.11.10.4400/zoom_amd64.deb
 sudo dpkg -i ~/Downloads/zoom*.deb
 
