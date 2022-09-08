@@ -3,6 +3,9 @@
 #enable multiverse repo
 sudo add-apt-repository multiverse
 
+#Add PPA for libssl1.1 from Impish
+sudo add-apt-repository ppa:nrbrtx/libssl1
+
 #update apt
 sudo apt update
 
@@ -31,4 +34,14 @@ sudo apt install code # or code-insiders
 
 
 #slack
-sudo snap install slack
+#sudo snap install slack  # Doesn't currently work. 
+wget https://downloads.slack-edge.com/releases/linux/4.28.171/prod/x64/slack-desktop-4.28.171-amd64.deb
+sudo dpkg -i ~/Downloads/slack-desktop*.deb
+
+#Zoom
+wget https://cdn.zoom.us/prod/5.11.10.4400/zoom_amd64.deb
+sudo dpkg -i ~/Downloads/zoom*.deb
+
+ 
+
+
