@@ -64,5 +64,5 @@ sudo apt-get install libgl1-mesa-glx libegl1-mesa libxcb-xtest0 libxcb-xinerama0
 #sudo dpkg -i ~/Downloads/zoom*.deb
 
  
-
+echo "You need to go get Zoom and Slack. :/"
 
