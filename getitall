@@ -7,16 +7,19 @@
 #sudo add-apt-repository ppa:nrbrtx/libssl1
 
 #update apt
+echo "updating your repositories..."
 sudo apt update
 
 #update the system
+echo "upgrading from your updated repositories..."
 sudo apt upgrade
 
 #get the programs I want
 #General Stuff
-sudo apt-get install --yes krita python3 vlc audacity inkscape gimp rpi-imager steam aptitude
+echo "Installing all your general Stuff you like..."
+sudo apt-get install --yes krita vlc audacity inkscape gimp rpi-imager steam-installer aptitude
 #Coding Stuff
-sudo apt-get install --yes nodejs slack-desktop npm git 
+sudo apt-get install --yes nodejs slack-desktop npm git python3 redis
 
 
 
