@@ -13,36 +13,48 @@ sudo apt update
 sudo apt upgrade
 
 #get the programs I want
-sudo apt-get install --yes krita python3 vlc git nodejs geany bluefish audacity inkscape gimp rpi-imager steam aptitude
-sudo apt-get install --yes nodejs slack-desktop npm
+#General Stuff
+sudo apt-get install --yes krita python3 vlc audacity inkscape gimp rpi-imager steam aptitude
+#Coding Stuff
+sudo apt-get install --yes nodejs slack-desktop npm git 
 
 
 
 
 #extra stuff not in repositories
 
-#Visual Studio Code
-sudo apt-get install wget gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-rm -f packages.microsoft.gpg
+#VS Codium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
 
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install code # or code-insiders
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+sudo apt update && sudo apt install codium
+
+#Visual Studio Code
+#sudo apt-get install wget gpg
+#wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+#sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+#sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+#rm -f packages.microsoft.gpg
+
+#sudo apt install apt-transport-https
+#sudo apt update
+#sudo apt install code # or code-insiders
 
 
 #slack
 #sudo snap install slack  # Doesn't currently work. 
-wget https://downloads.slack-edge.com/releases/linux/4.28.171/prod/x64/slack-desktop-4.28.171-amd64.deb
-sudo dpkg -i ~/Downloads/slack-desktop*.deb
+#wget https://downloads.slack-edge.com/releases/linux/4.28.171/prod/x64/slack-desktop-4.28.171-amd64.deb
+#sudo dpkg -i ~/Downloads/slack-desktop*.deb
 
 #Zoom
 #dependencies first...
 sudo apt-get install libgl1-mesa-glx libegl1-mesa libxcb-xtest0 libxcb-xinerama0
-wget https://cdn.zoom.us/prod/5.11.10.4400/zoom_amd64.deb
-sudo dpkg -i ~/Downloads/zoom*.deb
+#wget https://cdn.zoom.us/prod/5.11.10.4400/zoom_amd64.deb
+#sudo dpkg -i ~/Downloads/zoom*.deb
 
  
 
