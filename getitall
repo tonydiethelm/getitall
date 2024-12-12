@@ -19,6 +19,7 @@ sudo apt upgrade
 echo "Installing all your general Stuff you like..."
 sudo apt-get install --yes krita vlc audacity inkscape gimp rpi-imager steam-installer aptitude
 #Coding Stuff
+echo "Installing your coding stuff from repositories. Still need to get VSCodium..."
 sudo apt-get install --yes nodejs slack-desktop npm git python3 redis
 
 
@@ -27,6 +28,7 @@ sudo apt-get install --yes nodejs slack-desktop npm git python3 redis
 #extra stuff not in repositories
 
 #VS Codium
+echo "Getting VS codium..."
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
     | gpg --dearmor \
     | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
@@ -55,6 +57,8 @@ sudo apt update && sudo apt install codium
 
 #Zoom
 #dependencies first...
+
+echo "grabbing some dependencies you'll need for Zoom while we're at it."
 sudo apt-get install libgl1-mesa-glx libegl1-mesa libxcb-xtest0 libxcb-xinerama0
 #wget https://cdn.zoom.us/prod/5.11.10.4400/zoom_amd64.deb
 #sudo dpkg -i ~/Downloads/zoom*.deb
